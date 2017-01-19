@@ -1,5 +1,5 @@
 #FIX THE LINE BELOW
-class MyStr(str) : #<-----Replace xyz-make a new class, MyStr, that inherits from str
+class xyz : #<-----Replace xyz-make a new class, MyStr, that inherits from str
     """
     Build a subclass of str with some new, fun methods.
     """
@@ -18,12 +18,17 @@ class MyStr(str) : #<-----Replace xyz-make a new class, MyStr, that inherits fro
     def replace(self, take_out, use_this):
         """
         Override the replace method of string.
-        The new replace method is case-insensitive;
-        otherwise, it behaves the same as str.replace.
-        Example:
+        The new replace method is case-insensitive,
+        and the output will always be lower-case.
+
+        Examples:
         >>> test=MyStr('aAaA')
         >>> test.replace('a','b')
         bbbb
+
+        >>> test=MyStr('aAaADD')
+        >>> test.replace('AA','c')
+        ccdd
 
         :param take_out: the substring that will be replaced
         :param use_this: the substring that will be used in place of take_out
@@ -31,22 +36,17 @@ class MyStr(str) : #<-----Replace xyz-make a new class, MyStr, that inherits fro
         :returns: a new string with replacement complete
         """
         #################
-        #Make this method work in the way described in the block comment above
+        #Make this method work in the way described in
+        #the block comment above.
         #Hints:
         # 1. Remember that self is a MyStr object,
-        #    and a MyStr object is also a str
-        # 2. The following str methods will be helpful: replace, lower, and upper
-        # 3. You will need to call the replace method twice
-        # 4. There are multiple solutions, but you can do this in as little as 1 line.
+        #    and a MyStr object is also a str.
+        #    However, remember that to call the replace
+        #    method of str, you may need to use super
+        # 2. The following str methods will be helpful:
+        #       replace, lower, and upper
+        # 3. There are multiple solutions, but you can
+        #       do this in as little as 1 line.
         #YOUR CODE BELOW:
         #################
-        
-
-        str_lower_case = self.lower()
-        return str_lower_case.replace(take_out.lower(),use_this) 
-         
-        
-        
-
-
         
